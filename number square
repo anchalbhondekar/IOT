@@ -1,0 +1,19 @@
+int number;
+
+void setup()
+{
+ Serial.begin(9600); 
+}
+
+void loop()
+{
+  
+  if(Serial.available() > 0){
+  	number = Serial.parseInt();
+  	Serial.print("Square of : ");
+    Serial.print(number);
+    Serial.print(" is : ");
+    Serial.println(sq(number));
+    
+  }
+}
